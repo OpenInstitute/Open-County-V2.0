@@ -1,0 +1,14 @@
+th.ui-state-default div.DataTables_sort_wrapper { 
+	position: relative; white-space: nowrap; text-overflow: '..'/*ellipsis*/  !important; overflow-x: hidden; box-sizing: content-box; padding-right:15px; text-transform:none; 
+}
+th.ui-state-default.small_col { padding-right: 1px !important; width: 50px !important; }
+th.ui-state-default.small_col div.DataTables_sort_wrapper {  width: 50px !important; }
+div.DataTables_sort_wrapper .DataTables_sort_icon {  position:absolute; right:0px; top:1px;}
+
+.ui-widget-header { border: 1px solid #ddd; border-bottom-width: 0px; background: #F5F5F5; color: #222222; font-weight: bold; }
+
+.paging_full_numbers .fg-button { font-weight:normal !important; font-size: 12px; }
+
+table.display thead th { background: #F5F5F5; /*text-align:left*/}
+table.display > tbody > tr:nth-of-type(even) { background-color: #F9F9F9; }
+/*.table-hover*/ table.display > tbody > tr:hover { background-color: #C1DFAD; }

@@ -1,0 +1,296 @@
+@charset "utf-8";
+/* ============================================================================== 
+/*	@custom labels
+/* ------------------------------------------------------------------------------ */
+
+.label{display:inline-block;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}
+a.label:hover,a.label:focus{color:#fff;text-decoration:none;cursor:pointer}
+.label:empty{display:none}
+.btn .label{position:relative;top:-1px}
+
+.label-default{background-color:#777}
+.label-default[href]:hover,.label-default[href]:focus{background-color:#5e5e5e}
+
+.label-primary{background-color:#428bca}
+.label-primary[href]:hover,.label-primary[href]:focus{background-color:#3071a9}
+
+.label-success, 
+.label-yes{background-color:#5cb85c}
+.label-success[href]:hover,.label-success[href]:focus,
+.label-yes[href]:hover,.label-yes[href]:focus{background-color:#1CAF9A}
+
+.label-info{background-color:#5bc0de}
+.label-info[href]:hover,.label-info[href]:focus{background-color:#31b0d5}
+
+.label-warning{background-color:#f0ad4e}
+.label-warning[href]:hover,.label-warning[href]:focus{background-color:#ec971f}
+
+.label-danger, .label-no{background-color:#d9534f}
+.label-danger[href]:hover,.label-danger[href]:focus{background-color:#c9302c}
+
+.label { -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 3px 8px; margin-top:1px !important; font-weight: normal; font-size: 11px; }
+.label a {color: #FFF !important; text-decoration: none !important; }
+.label-success, .label-yes { background-color: #1CAF9A; }
+
+/* -------------------------------------------------------------------------------------------------------- */
+input#nah_snd { float:left; visibility:hidden !important; margin:0 !important; padding:0 !important; height:0 !important; width:0 !important; }
+
+.label-control { line-height: 40px; padding-left: 0; }
+
+
+/*-------------------------------------------------------------------------------------------------------
+@ LAYOUT - LOGO AREA
+-------------------------------------------------------------------------------------------------------*/
+
+
+.wrap_head_logo a { text-decoration: none !important;}
+.wrap_head_logo {background:none; border:0px solid; margin:0; padding:3px 0; position:relative;height:56px; }   
+.logo-img-box { position:absolute; top:3px; left:10px;height:50px;width:40px; z-index: 1 !important;}   
+.logo-img-box img#logo-img { height:50px; }
+.logo-img-label {  height:50px; vertical-align:middle; display:table-cell; border:0px solid; padding-left: 50px; }
+.logo-img-label h1 {font-variant:small-caps; font-size: 22px;line-height:27px;padding:0; text-shadow:0 1px #069;}   
+
+.logo-img-label h1 span { 
+	display:inline; padding-left: 0px; /*font-family:"Times New Roman", Times, serif;*/ font-size:15px;
+	font-weight:normal; color: #D72E94;
+	text-shadow: none;}
+	
+
+
+/*-------------------------------------------------------------------------------------------------------
+@ FORM FIELD LAYOUTS 
+-------------------------------------------------------------------------------------------------------*/
+
+input.col-md-1, button.col-md-1, select.col-md-1, textarea.col-md-1 { width: calc(7.333333333333332% - 2px); }
+input.col-md-2, button.col-md-2, select.col-md-2, textarea.col-md-2 { width: calc(16.666666666666664% - 2px); }
+input.col-md-3, button.col-md-3, select.col-md-3, textarea.col-md-3 { width: calc(25% - 2px); }
+input.col-md-4, button.col-md-4, select.col-md-4, textarea.col-md-4 { width: calc(33.33333333333333% - 2px); }
+input.col-md-5, button.col-md-5, select.col-md-5, textarea.col-md-5 { width: calc(41.66666666666667% - 2px); }
+input.col-md-6, button.col-md-6, select.col-md-6, textarea.col-md-6 { width: calc(50% - 2px); }
+input.col-md-7, button.col-md-7, select.col-md-7, textarea.col-md-7 { width: calc(58.333333333333336% - 2px); }
+input.col-md-8, button.col-md-8, select.col-md-8, textarea.col-md-8 { width: calc(66.66666666666666% - 2px); }
+input.col-md-9, button.col-md-9, select.col-md-9, textarea.col-md-9 { width: calc(75% - 2px); }
+input.col-md-10, button.col-md-10, select.col-md-10, textarea.col-md-10 { width: calc(83.33333333333334% - 2px); }
+input.col-md-11, button.col-md-11, select.col-md-11, textarea.col-md-11 { width: calc(91.66666666666666% - 2px); }
+input.col-md-12, button.col-md-12, select.col-md-12, textarea.col-md-12 { width: 100% - 2px); }
+input[class*="col-md"], select[class*="col-md"], textarea[class*="col-md"] { margin-right: 2px !important;}		
+	
+
+@media only screen  and (max-width: 768px) 
+{
+	/*div[class*="col-md"], */input[class*="col-md"], select[class*="col-md"], textarea[class*="col-md"]
+	{ float: none; width: 100% !important; margin:0; display:block !important;  } 	
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------
+@ PADDING OVERRIDES
+-------------------------------------------------------------------------------------------------------*/
+	
+.padd2, table.padd2 td	      { padding:2px !important;}
+
+.padd5	  	  { padding: 5px !important;}
+.padd5_t      { padding-top: 5px !important;}
+.padd5_b      { padding-bottom: 5px !important; }
+.padd5_l 	  { padding-left: 5px !important;}
+.padd5_r      { padding-right: 5px !important;}
+.padd5_0	  { padding: 5px 0px !important;}
+.padd5_10	  { padding:5px 10px !important;}
+
+
+.padd10	  	  { padding: 10px !important;}
+.padd10_t     { padding-top: 10px !important;}
+.padd10_b     { padding-bottom: 10px !important; }
+.padd10_l 	  { padding-left: 10px !important;}
+.padd10_r     { padding-right: 10px !important;}
+.padd10_0	  { padding: 10px 0px !important;}
+.padd10_5	  { padding: 10px 5px !important;}
+
+
+.padd15	  	  { padding: 15px !important;}
+.padd15_t     { padding-top: 15px !important;}
+.padd15_b     { padding-bottom: 15px !important; }
+.padd15_l 	  { padding-left: 15px !important;}
+.padd15_r     { padding-right: 15px !important;}
+.padd15_0	  { padding:15px 0px !important;}
+.padd15_5	  { padding:15px 5px !important;}
+.padd15_10	  { padding:15px 10px !important;}
+
+
+.padd20	  	  { padding: 20px !important;}
+.padd20_t     { padding-top: 20px !important;}
+.padd20_b     { padding-bottom: 20px !important; }
+.padd20_l 	  { padding-left: 20px !important;}
+.padd20_r     { padding-right: 20px !important;}
+.padd20_0	  { padding:20px 0px !important;}
+.padd20_5	  { padding:20px 5px !important;}
+.padd20_10	  { padding:20px 10px !important;}
+.padd20_15	  { padding:20px 15px !important;}
+
+
+.padd25	  	  { padding: 25px !important;}
+.padd25_t     { padding-top: 25px !important;}
+.padd25_b     { padding-bottom: 25px !important; }
+.padd25_l 	  { padding-left: 25px !important;}
+.padd25_r     { padding-right: 25px !important;}
+.padd25_0	  { padding:25px 0px !important;}
+.padd25_5	  { padding:25px 5px !important;}
+.padd25_10	  { padding:25px 10px !important;}
+.padd25_15	  { padding:25px 15px !important;}
+
+
+.padd0_3	  { padding:0 3px !important;}
+.padd0_5	  { padding:0 5px !important;}
+.padd0_10	  { padding:0 10px !important;}
+.padd0_15	  { padding:0 15px !important;}
+
+
+.padd0_t	{ padding-top:0px !important;}
+.padd0_b	{ padding-bottom:0px !important;}
+.padd0_l	{ padding-left:0px !important;}
+.padd0_r 	{ padding-right:0px !important;}
+
+
+
+.marg5 	 	{ margin: 5px; }
+
+.marg10_0	  { margin: 10px 0 !important;}
+.marg15_0	  { margin: 15px 0 !important;}
+
+.marg0_10	  { margin:0 10px !important;}
+.marg0_b	 	{ margin-bottom: 0px !important; }
+.marg5_b 	 	{ margin-bottom: 5px; }
+.marg10_b 	 { margin-bottom: 10px; }
+.marg15_b 	 { margin-bottom: 15px !important; }
+.marg20_b	 { margin-bottom: 20px; }
+
+.marg3_r 	 	{ margin-right: 3px !important; }
+.marg5_r 	 	{ margin-right: 5px; }
+.marg10_r 	 { margin-right: 10px; }
+.marg15_r 	 { margin-right: 15px; }
+.marg20_r	 { margin-right: 20px; }
+
+.marg0_t 	 	{ margin-top: 2px; }
+.marg2_t 	 	{ margin-top: 2px; }
+.marg5_t 	 	{ margin-top: 5px; }
+.marg10_t 	 { margin-top: 10px; }
+.marg15_t 	 { margin-top: 15px; }
+.marg20_t	 { margin-top: 20px; }
+
+.marg0_l    { margin-left: 0;}
+
+.bold	  { font-weight: bold !important; }
+.nopad, .nopadd, 
+table.nopadd td, table.nopadd tr {padding: 0 !important;}
+.nobold	  { font-weight:normal !important;}
+.nomargin	  {margin: 0 !important;}
+.nomargin-btm	  {margin-bottom:0px !important;}
+.notransform { text-transform:none; text-decoration:none !important;}
+
+.noborder, 
+.noborder li,
+.noborder td, 
+.noborder th { border:none !important;}
+.border_top_only { border-width: 1px 0 0 0; }
+
+.border_top_gray { border-top:1px solid #ddd !important; }
+.border_bottom_gray { border-bottom:1px solid #ddd !important; }
+
+.padd_side_only, table.padd_side_only td { padding-top: 0px; padding-bottom: 0px; }
+.border_bottom_only, table.border_bottom_only td { border-width: 0 0 1px 0; }
+
+.aheight { height:auto !important; }
+.nobg { background: none !important; }
+
+.float-right{float:right}
+
+.linegray { border-bottom: 1px solid #e7e7e7; padding-bottom: 3px; margin-bottom:3px; }
+.linegreen { border-bottom: 1px solid #009538; padding-bottom: 3px; margin-bottom:8px; }
+.linegraydot { border-bottom: 1px dotted #e7e7e7;}
+
+
+.sidehead { font-size: 12px; color:#313435; margin: 0.5em 0; font-weight:bold; 	font-family: arial, tahoma; display:block; }
+.nocaps { text-transform:none !important; }
+.noblock, .noblock * { display:inline-block !important; width:auto; }
+label.noblock { display:inline; }
+.none, .hidden { display:none !important; }
+.block { display:block !important;}
+
+
+.txt10 	  {font-size:80% !important;}
+.txt11 	  {font-size:85% !important;}
+.txt12 	  {font-size:95% !important;}
+.txt13 	  {font-size:100% !important;}
+.txt14 	  {font-size:105% !important;}
+.txt15 	  {font-size:115% !important;}
+.txt16 	  {font-size:120% !important;}
+.txt17 	  {font-size:140% !important;}
+.txt18 	  {font-size:18px !important}
+.txt19 	  {font-size:19px !important;}
+.txt21 	  {font-size:21px !important;}
+.txt24 	  {font-size:24px !important;}
+.txt30 	  {font-size:30px !important;}
+.txt35 	  {font-size:35px !important;}
+
+.txtline1 { line-height: 100% /*14px*/ !important; }
+.txtline15 { line-height: 150% !important; }
+.txtline17 { line-height: 170%; }
+
+.txt85 	{ font-size: 85%; }
+.txt90 	{ font-size: 90%; }
+.txt95 	{ font-size: 95%; }
+.txt105 	{ font-size: 105%; }
+.txt110 	{ font-size: 110%; }
+.txt115 	{ font-size: 115%; }
+.txt120 	{ font-size: 120%; }
+
+.txtbigger 	{ font-size: 140%; }
+
+.txticon	{ font-size: 350%; }
+
+.stat-wrap { border-radius: 3px !important; margin:5px; position:relative; }
+.stat-icon   { font-size: 40px; line-height: 60px; float: left; width: 60px; }
+.stat-box   { font-size: 25px; line-height: 60px; display:block; width:auto; /*font-family: Calibri;*/ margin:0px 0px 0px 60px; }
+.stat-box a, .stat-box a:hover { text-decoration:none; }
+
+.txtsmaller, .txtsmallerb { font-size: 9pt !important; line-height: 160%;  }
+.txtsmallerb { font-size: 10pt !important; }
+
+
+.txtleft 	{ text-align:left !important;}
+.txtcenter 	{ text-align:center !important;}
+.txtright 	{ text-align:right !important;}
+.txtjustify 	{ text-align:justify !important;}
+
+@media only screen and ( max-width: 700px ) 
+{
+	.txtcenter, .txtright 	{ text-align:left !important;}
+}
+
+.txtred 	{ color:#dc3018  !important;}
+.txtwhite 	{ color:#FFFFFF  !important;}
+.txtyellow 	{ color:#F1C63C  !important;}
+.txtorange 	{ color: #F60 /*#F55631*/  !important;}
+.txtgreen   { color:#009D42 !important;}
+.txtblack	{ color:#000000 !important;}
+.txtblue	{ color: #0E8EAB /*#254290*/ !important;}
+.txtbluelight { color: #D9F3FD !important;}
+.txtgray	{ color:#666 !important;}
+.txtgraylight { color: #969696 !important; }
+.txtpurple  { color:#936 !important; }
+.txtbrown   { color: #C24D00 !important;/**/ }
+.txtbrown-d   { color: #522200 !important; }
+
+
+.txtupper	{ text-transform:uppercase !important; }
+.txtuline   { text-decoration:underline; }
+
+.txtgeorgia { font-family:Georgia;}
+.txttahoma  { font-family:tahoma;}
+.txttimes   { font-family:Times;}
+
+.txtarial   { font-family:Arial, Helvetica, sans-serif !important;}
+.txtopensanscond { font-family: 'Open Sans Condensed', "Arial Narrow" !important; }
+
+

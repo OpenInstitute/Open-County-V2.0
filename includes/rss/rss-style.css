@@ -1,0 +1,29 @@
+
+.rsslib
+{
+  font-family: Verdana, Georgia, Arial;
+  font-size:90%;
+  min-width:200px;
+  /*max-width:500px;*/
+}
+
+.rsslib ul
+{
+  list-style-type: none;
+} 
+
+.rsslib ul li
+{
+  margin-bottom:8px;
+} 
+
+.rssdate, .rssdesc
+{
+  font-size: 90%;
+  font-style:italic;
+}
+
+.rssdesc td.j { padding-left: 10px !important;}
+.rssdesc td.j font br:first-child,
+.rssdesc td.j font a:first-child { display: none !important;}
+.rssdesc td.j div.lh { margin-top: -30px !important;}

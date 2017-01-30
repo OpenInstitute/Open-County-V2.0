@@ -1,0 +1,424 @@
+
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 10px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	/*max-width: 100%;*/
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	/*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	left: -5px;
+	background: #fff;*/
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	border:1px solid #F87622;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+/*.bx-wrapper .bx-prev { left: 10px; background: url(images/controls.png) no-repeat 0 -32px; }
+.bx-wrapper .bx-next { right: 10px; background: url(images/controls.png) no-repeat -43px -32px; }
+.bx-wrapper .bx-prev:hover { background-position: 0 0; }
+.bx-wrapper .bx-next:hover { background-position: -43px 0; }*/
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+	outline: 0;
+	width: 20px; height: 45px;
+	text-indent: -9999px;
+	z-index: 10;
+	opacity: 0.7;
+	border:1px solid #efefef; background-color:rgba(239,239,239,0.5);
+	background-image:url(images/btn_arrows.png); background-repeat:no-repeat; background-size: 40px 45px;
+}
+
+.bx-wrapper .bx-prev { /*right: 26px;*/ left:-20px; background-position: 0; }
+.bx-wrapper .bx-next { /*right: 5px;*/ right: -20px; background-position: -20px; }
+.bx-wrapper .bx-controls-direction a.disabled { display: none; }
+
+
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+
+
+
+
+
+.bxcarousel li {
+    /*height: 327px; 
+	width: 260px;
+	overflow:hidden;*/
+	position:relative;
+}
+
+.bxcarousel .slide-image .img-full {
+	width					: auto;/**/
+	max-width: 400px;
+	/*min-*//*height					: 100% !important;*/
+	position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+.bxcarousel .slide-image {
+    z-index: 0;
+    position: relative/*absolute*/;
+    height: 327px;
+    top: 0px;
+    left: 0px;
+	overflow:hidden;
+}
+
+.bxcarousel .slide-caption {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    background: url(images/bg_gray.png);
+    height: 104px;
+    color: #fff;
+	padding:10px;
+}
+
+.bxcarousel .slide-image,
+.bxcarousel .slide-caption { width: 230px; }
+
+
+.bxcarousel .slide-caption * {
+	 color: #fff;
+}
+
+.bxcarousel .slide-caption h5 { display: none; }
+.bxcarousel .slide-caption h2 { font-size: 21px; line-height:normal; margin:0; padding:0;  }
+.bxcarousel .slide-caption p { font-size: 12px; line-height:normal; margin:0; padding:0; font-family:helvetica;  }
+
+
+
+
+.bxinner,
+.bxinner li { margin: 0; padding:0;}
+.bxinner li { border:2px solid #ddd; position:relative; }
+
+.bxinner .slide-image .img-full {
+	width: 100%;
+	/*position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;*/
+}
+
+.bxinner .slide-image {
+    z-index: 0;
+    position: relative/*absolute*/;
+    height: 327px;
+    top: 0px;
+    left: 0px;
+	overflow:hidden;
+}
+
+.bxinner .slide-caption {
+    z-index: 1;
+    display: block;
+    position: absolute;
+	left: 0px;
+    bottom: 0px;
+    background: url(images/bg_gray.png);
+    color: #fff;
+	padding:10px;
+}
+
+.bxinner .slide-image,
+.bxinner .slide-caption { width: 100%; }
+
+
+.bxinner .slide-caption * { color: #fff; }
+.bxinner .slide-caption h3 { font-size: 15px; color:#FFF; line-height:1.2; margin:0; padding:0; background:none;  }
+.bxinner .slide-caption p { font-size: 12px; line-height:normal; margin:0; padding:0; font-family:helvetica;  }
+
+.bxinner, 
+.bxinner .bx-viewport, 
+.bxinner li, 
+.bxinner li .img-full { width:100%; height: 330px;}
+.bxinner li .img-full { min-height: 330px;}
+
+#site-slider { height: 100%;  /*overflow:hidden;*/ }
+#site-slider.banner_inside .bx-wrapper .bx-pager { bottom: 0px; background: none; padding-top:5px; }
+#site-slider.banner_inside .bx-wrapper .bx-controls-direction a {top: 55%;}
+#site-slider.banner_inside .bx-wrapper .bx-prev { left: 5px; background-position: 0; }
+	
+/*
+
+	Theme Name: AGEN - One Page & Multi Page Responsive HTML5 Template
+	Theme URI: http://locotheme.com/agen-html/
+	Description: One Page & Multi Page Responsive HTML5 Template
+	Version: 1.0
+	Author: Loco Theme
+	Author URI: http://www.locotheme.com
+
+	- - - - - Contents - - - - -
+	
+	01 - Max 480px
+	02 - Max 767px
+	03 - Max 991px
+	04 - Max 1024
+	05 - Min 768px
+	06 - Min 992px
+	07 - Min 1200px
+
+	- - - - - - - - - - - - - -
+	
+*/
+
+/*  01 -  Max 480px
+-----------------------------------------------------------*/
+@media (max-width: 480px){
+	#site-slider .slide-caption{
+		text-align				: center;
+	}
+	#site-slider .slide-caption{
+		padding					: 0;
+	}
+	#site-slider .slide-caption .btn{
+		display					: none;
+	}
+	#site-slider .slide-caption .line-bottom:after{
+		left					: 50%;
+		margin-left				: -10px;
+	}
+	#site-slider .bx-pager,
+	#site-slider .bx-controls-auto{
+		bottom					: 10px;
+	}
+}
+
+/*  02 -  Max 767px
+-----------------------------------------------------------*/
+@media (max-width: 767px){
+	.bxcarousel li {
+		float: none; width: 100%; margin:0; display:block;
+	}
+	#site-slider .slide-caption h2{
+		font-size				: 24px;
+		margin					: 10px 0;
+	}
+	#site-slider .slide-caption h3{
+		margin-bottom			: 20px;
+	}
+	#site-slider .slide-caption h5{
+		margin-bottom			: 0;
+	}
+	#site-slider .slide-caption h3,
+	#site-slider .slide-caption h4{
+		font-size				: 14px;
+	}
+	#site-slider .slide-caption .btn{
+		font-size				: 12px;
+		padding					: 0 10px;
+		height					: 30px;
+		line-height				: 30px;
+	}
+}
+
+/*  03 -  Max 991px
+-----------------------------------------------------------*/
+@media (max-width: 991px){
+	
+}
+
+/*  04 -  Max 1024px
+-----------------------------------------------------------*/
+@media (max-width: 1024px){
+	
+}
+
+/*  05 -  Min 768px
+-----------------------------------------------------------*/
+@media (min-width: 768px){
+	
+}
+
+/*  06 -  Min 992px
+-----------------------------------------------------------*/
+@media (min-width: 992px){
+	
+}
+
+/*  07 -  Min 1200px
+-----------------------------------------------------------*/
+@media (min-width: 1200px){
+	.wrapper,
+	#site-container{
+		width					: 100%;
+		margin					: 0 auto;
+	}
+	#site-slider .wrapper{
+		width					: 100%;
+	}
+	/*#site-slider .slide-caption .wrapper{
+		width					: 1101px;
+		margin					: 0 auto;
+	}*/
+}
