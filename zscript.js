@@ -1,5 +1,4 @@
 jQuery.noConflict();
-
 jQuery(document).ready(function ($) {
 	var token = Math.random();
 	
@@ -17,9 +16,6 @@ jQuery(document).ready(function ($) {
 	
 	
 });	
-	
-
-
 function hc_pieChartDrill(cElement, cLabel, cData, cDrillData){  
     jQuery(document).ready(function($) {
 		
@@ -222,5 +218,3 @@ function doFormsValidate() {
 		}
 	});
 }
-
-
